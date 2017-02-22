@@ -1,0 +1,58 @@
+{
+  "name": "tool-service",
+  "version": "0.0.1",
+  "description": "Service which saves and stores data about tools.",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "test": "gulp tslint && mocha --reporter spec --compilers ts:ts-node/register src/**/*.spec.ts",
+    "test-jenkins": "JUNIT_REPORT_PATH=report.xml mocha --colors --reporter mocha-jenkins-reporter --compilers ts:ts-node/register src/**/*.spec.ts",
+    "apidoc": "apidoc -i src/ -o .dist/apidoc/",
+    "build": "gulp build",
+    "tslint": "gulp tslint",
+    "watch": "gulp watch"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "http://git.ungear.us/DemeBot/tool-service.git"
+  },
+  "apidoc": {
+    "sampleUrl": "<base-doc-url>"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/body-parser": "0.0.33",
+    "@types/chai": "^3.4.34",
+    "@types/chai-http": "0.0.29",
+    "@types/debug": "0.0.29",
+    "@types/express": "^4.0.33",
+    "@types/mocha": "^2.2.38",
+    "@types/morgan": "^1.7.32",
+    "@types/mysql": "0.0.31",
+    "@types/node": "^6.0.46",
+    "apidoc": "^0.17.5",
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "gulp-mocha": "^3.0.1",
+    "gulp-tslint": "^7.0.1",
+    "gulp-typescript": "^3.1.4",
+    "mocha": "^3.2.0",
+    "mocha-jenkins-reporter": "^0.3.5",
+    "node-mocks-http": "^1.5.6",
+    "sinon": "^1.17.7",
+    "ts-node": "^2.0.0",
+    "tslint": "^4.4.2",
+    "typescript": "^2.1.5"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "debug": "^2.6.0",
+    "express": "^4.14.0",
+    "express-interceptor": "^1.2.0",
+    "gulp": "^3.9.1",
+    "morgan": "^1.7.0",
+    "mysql": "^2.13.0"
+  }
+}
